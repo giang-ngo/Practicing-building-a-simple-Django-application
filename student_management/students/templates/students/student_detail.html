@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div s class="card" style="width: 80rem;text-align: center;margin: 100px auto;">
+    <div class="card-body">
+      <h5 class="card-title">{{student.full_name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Birth Date: {{student.birth_date}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Gpa: {{student.average_score}}</h6>
+      <p class="card-text">Class Name: {{student.class_name}}</p>
+      <a href="{{request.META.HTTP_REFERER}}" class="card-link">Go Back</a>
+    </div>
+  </div>
+{% endblock %}
